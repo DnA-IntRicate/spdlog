@@ -90,3 +90,12 @@ cmake-build-*/
 # macos
 *.DS_store
 *.xcodeproj/
+
+# Visual Studio Projects
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.csproj
+
+# IntricateEngine CMake files
+spdlog.cmake
