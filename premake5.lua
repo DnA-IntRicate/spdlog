@@ -2,6 +2,8 @@
 
 project "spdlog"
     language "C++"
+    kind "StaticLib"
+    warnings "Off"
 
     debugdir (OUT_DIR)
     targetdir (OUT_DIR)
@@ -24,22 +26,16 @@ project "spdlog"
     }
 
     filter "system:windows"
-		kind "SharedLib"
         systemversion "latest"
         cppdialect "C++11"
-		defines
-		{
-			"SPDLOG_SHARED_LIB",
-			"spdlog_EXPORTS"
-		}
 
     filter "system:linux"
-		kind "StaticLib"
+        kind "StaticLib"
         systemversion "latest"
         cppdialect "gnu++11"
 
     filter "system:macosx"
-		kind "StaticLib"
+        kind "StaticLib"
         systemversion "latest"
         cppdialect "gnu++11"
 
