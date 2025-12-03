@@ -11,7 +11,7 @@
 project "spdlog"
     language "C++"
     kind "StaticLib"
-    warnings "Off"
+    warnings "off"
 
     debugdir (OUT_DIR)
     targetdir (OUT_DIR)
@@ -42,6 +42,7 @@ project "spdlog"
     if SPDLOG_FMT_INCLUDE_DIR then
         includedirs { "%{SPDLOG_FMT_INCLUDE_DIR}" }
         defines { "SPDLOG_FMT_EXTERNAL" }
+        links { "fmt" }
     end
 
     filter "system:windows"
